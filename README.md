@@ -3,4 +3,6 @@ Tested to work in Russia. Configurations are collected from other similar github
 
 a - all valid configurations found by me
 
-b - manually chosen configurations with VLESS/Reality, recommended
+b - manually chosen configurations with VLESS/Reality [Recommended]
+
+c - subscription for testing
