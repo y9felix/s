@@ -6,6 +6,7 @@ Configurations are collected from other similar github repositories, you can fin
 Config checking algorhythm:
 - run d.py
 - check with [nekoray](https://github.com/MatsuriDayo/nekoray) for validity
+- use the ones that work
 
 a - all valid configurations found by me
 
