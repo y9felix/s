@@ -18,3 +18,4 @@ d.py - searches for the lines that have **thing** in links and adds them to **pa
 
 e.py - adds country flags to configs by checking their IP's through a free API.
 
+More about VLESS VPN (in Russian) [Article](https://habr.com/ru/articles/727868/) [Video](https://www.youtube.com/watch?v=Ajy1lS9qJbs)
