@@ -14,7 +14,7 @@ b - manually chosen VLESS with Reality/XTLS configurations [Recommended]
 
 c - subscription for testing
 
-g - all valid cfg from sites [Recommended]
+d - all valid cfg from sites [Recommended]
 
 a.py - searches for the lines that have **thing** in links and adds them to **path**. Also does some cleaning, sorting and numbering for better experience.
 
