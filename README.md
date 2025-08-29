@@ -8,14 +8,19 @@ Config checking algorhythm:
 - check with [nekoray](https://github.com/MatsuriDayo/nekoray) for validity
 - use the ones that work
 
-a - all valid configurations found by me
+a - all valid cfg from github
 
 b - manually chosen VLESS with Reality/XTLS configurations [Recommended]
 
 c - subscription for testing
 
+g - all valid cfg from sites
+
 d.py - searches for the lines that have **thing** in links and adds them to **path**. Also does some cleaning, sorting and numbering for better experience.
 
 e.py - adds country flags to configs by checking their IP's through a free API.
 
+f.py - config scraper from a site I found
+
 More about VLESS VPN (in Russian) - [Article](https://habr.com/ru/articles/727868/)||[Video](https://www.youtube.com/watch?v=Ajy1lS9qJbs)
+
