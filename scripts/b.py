@@ -1,86 +1,34 @@
 import requests
-from urllib.parse import unquote
+import re
 
-file_path = "/home/felix/Documents/all.txt"
-existing_lines = set()
+def get_flag(code):
+    return ''.join(chr(ord(c) + 127397) for c in code) if code else ''
 
-try:
-    with open(file_path, 'r', encoding='utf-8') as f:
-        for line in f:
-            pos = line.rfind('#')
-            clean_line = unquote(line[:pos].strip() if pos != -1 else line.strip())
-            if clean_line: existing_lines.add(clean_line)
-except FileNotFoundError:
-    pass
-
-urls = [url.strip() for url in input("URLs: ").replace(',', ' ').split()]
-new_lines = set()
-
-for url in urls:
-    try:
-        response = requests.get(url, timeout=10)
-        text = response.text
-        for line in text.splitlines():
-            pos = line.rfind('#')
-            clean_line = unquote(line[:pos].strip() if pos != -1 else line.strip())
-            if clean_line: new_lines.add(clean_line)
-    except:
-        continue
-
-original_count = len(existing_lines)
-existing_lines.update(new_lines)
-new_count = len(existing_lines) - original_count
-
-def sort_key(line):
-    q_pos = line.find('?')
-    return (len(line), line[q_pos:] if q_pos != -1 else line)
-
-sorted_lines = sorted(existing_lines, key=sort_key)
-
-host_to_flag = {}
-
-def country_to_flag(cc):
-    return ''.join(chr(ord(c) + 127397) for c in cc) if cc else ''
-
-for line in sorted_lines:
-    host = None
-    at_pos = line.find('@')
-    if at_pos != -1:
-        rest = line[at_pos+1:]
-        colon_pos = rest.find(':')
-        if colon_pos != -1:
-            host_candidate = rest[:colon_pos]
-            if host_candidate.startswith('[') and host_candidate.endswith(']'):
-                host = host_candidate[1:-1]
-            else:
-                host = host_candidate
-    
-    print(host)
-    if host and host not in host_to_flag:
+cache = {}
+def get_country(ip):
+    if ip not in cache:
         try:
-            response = requests.get(f"http://ip-api.com/json/{host}?fields=countryCode", timeout=5)
-            if response.status_code == 200:
-                data = response.json()
-                host_to_flag[host] = country_to_flag(data.get('countryCode', ''))
-            else:
-                host_to_flag[host] = ''
+            r = requests.get(f"http://ip-api.com/json/{ip}?fields=countryCode", timeout=5)
+            cache[ip] = r.json().get('countryCode', '')
         except:
-            host_to_flag[host] = ''
+            cache[ip] = ''
+    return cache[ip]
 
-with open(file_path, 'w', encoding='utf-8') as f:
-    for idx, line in enumerate(sorted_lines, 1):
-        host = None
-        at_pos = line.find('@')
-        if at_pos != -1:
-            rest = line[at_pos+1:]
-            colon_pos = rest.find(':')
-            if colon_pos != -1:
-                host_candidate = rest[:colon_pos]
-                if host_candidate.startswith('[') and host_candidate.endswith(']'):
-                    host = host_candidate[1:-1]
-                else:
-                    host = host_candidate
-        flag_emoji = host_to_flag.get(host, '') if host else ''
-        f.write(f"{line}#{idx:03d}{flag_emoji}\n")
+with open('all.txt') as f:
+    lines = f.readlines()
 
-print(f"New: {new_count}, Total: {len(existing_lines)}")
+processed = []
+for idx, line in enumerate(lines):
+    line = line.strip()
+    line = line.split('#')[0].strip()
+    match = re.search(r'@([^:]+):', line)
+    ip = match.group(1) if match else ''
+    country_code = get_country(ip)
+    flag = get_flag(country_code)
+    print(f"{ip} is {flag}")
+    processed.append(f"{line}#{idx+1:03d}{flag}")
+
+processed.sort(key=lambda x: (len(x), re.search(r'@([^:]+):', x).group(1) if re.search(r'@([^:]+):', x) else ''))
+
+with open('all.txt', 'w') as f:
+    f.write('\n'.join(processed))
