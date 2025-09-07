@@ -1,4 +1,7 @@
 ## VPN subscriptions for daily usage
+[![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/y9felix/s/blob/main/README.ru.md)
+[![en](https://img.shields.io/badge/lang-en-yellow.svg)](https://github.com/y9felix/s/blob/main/README.md)
+
 Tested to work in Russia, RTK ISP. 
 Configurations are collected from other similar github repositories, you can find the best collection of them in [NiREvils](https://github.com/NiREvil/vless?tab=readme-ov-file#xray) repository. 
 80% are guaranteed to work on the first day after an update.
