@@ -1,5 +1,9 @@
 ## VPN-подписки для ежедневного использования
+[![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/y9felix/s/blob/main/README.md)
+[![en](https://img.shields.io/badge/lang-en-yellow.svg)](https://github.com/y9felix/s/blob/main/README.en.md)
+
 Протестировано в России, провайдер РТК.  
+Бесплатно навсегда, невозможна утечка данных/привязка их к человеку.
 Конфигурации собраны из других аналогичных репозиториев на GitHub, лучшую коллекцию из них можно найти в репозитории [NiREvil](https://github.com/NiREvil/vless?tab=readme-ov-file#xray).  
 80% гарантированно работают в первый день после обновления.
 
@@ -8,8 +12,8 @@
 - Чек валидность через [nekoray](https://github.com/MatsuriDayo/nekoray)
 
 Подписки
-- a — все валидные конфиги с GitHub
-- b — вручную отобранные конфигурации VLESS с Reality/XTLS [Рекомендуется]
+- a — все валидные конфиги с GitHub. Обновляется раз в неделю.
+- b — вручную отобранные конфигурации VLESS с Reality/XTLS. Обновляется раз в два-три дня. [Рекомендуется]
 - c — для тестов
 
 Скрипты
