@@ -1,4 +1,4 @@
-## VPN-подписки для ежедневного использования
+## VPN for everyday usage
 [![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/y9felix/s/blob/main/README.md)
 [![en](https://img.shields.io/badge/lang-en-yellow.svg)](https://github.com/y9felix/s/blob/main/README.en.md)
 
