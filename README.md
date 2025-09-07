@@ -1,22 +1,21 @@
-## VPN for everyday usage
-[![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/y9felix/s/blob/main/README.md)
-[![en](https://img.shields.io/badge/lang-en-yellow.svg)](https://github.com/y9felix/s/blob/main/README.en.md)
+## VPN subscriptions for daily usage
 
-Протестировано в России, провайдер РТК.  
-Бесплатно навсегда, невозможна утечка данных/привязка их к человеку.  
-Конфигурации собраны из других аналогичных репозиториев на GitHub, лучшую коллекцию можно найти в репозитории [NiREvil](https://github.com/NiREvil/vless?tab=readme-ov-file#xray).
+Tested in Russia, RTK ISP.  
+Free forever, no possibility of data leaks or linking them to a person.  
+Configurations are collected from other similar GitHub repositories; the best collection can be found in the [NiREvil](https://github.com/NiREvil/vless?tab=readme-ov-file#xray) repository.  
+80% are guaranteed to work on the first day after an update.
 
-Алгоритм проверки конфигураций:
-- Старт `a.py`
-- Чек валидность через [nekoray](https://github.com/MatsuriDayo/nekoray)
+Configuration checking algorithm:
+- Start `a.py`
+- Check validity via [nekoray](https://github.com/MatsuriDayo/nekoray)
 
-Подписки
-- a — все валидные конфиги с GitHub.
-- b — вручную отобранные конфигурации VLESS с Reality/XTLS. [Рекомендуется]
-- c — для тестов
+Subscriptions
+- a — All valid configs from GitHub. Updated once a week.
+- b — Manually selected VLESS configurations with Reality/XTLS. Updated every 2–3 days. [Recommended]
+- c — For testing
 
-Скрипты
-- `a.py` — ищет строки, содержащие запрос в ссылках, и добавляет их в файл. Также чистит, сортирует и нумерует для лучшей видимости.
-- `b.py` — добавляет флаги стран к конфигам, проверяя их IP через бесплатный API. [Медленно]
+Scripts
+- `a.py` — Searches for the lines that have thing in links and adds them to path. Also does some cleaning, sorting and numbering for better experience.
+- `b.py` — Adds country flags to configs by checking their IP via a free API. [Slow]
 
-Подробнее о VLESS и других протоколах — [Статья](https://habr.com/ru/articles/727868/) || [Видео](https://www.youtube.com/watch?v=Ajy1lS9qJbs)
+More about VLESS and other protocols (In Russian) — [Article](https://habr.com/ru/articles/727868/) || [Video](https://www.youtube.com/watch?v=Ajy1lS9qJbs)
