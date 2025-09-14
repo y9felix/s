@@ -14,6 +14,7 @@ Subscriptions
 - b — Manually selected VLESS configurations with Reality/XTLS. Updated every 2–3 days. [Recommended]
 - c — For testing
 - d — configs that are active longer than a month
+- r — russian servers
 
 Scripts
 - `a.py` — Searches for the lines that have thing in links and adds them to path. Also does some cleaning, sorting and numbering for better experience.
