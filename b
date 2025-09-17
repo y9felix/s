@@ -1,3 +1,4 @@
+//profile-update-interval: 12
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.160:8880?security=&type=grpc&encryption=none#117🇫🇷
 vless://1lpxy6haqm@1lpxy6haqm-451516713-direct.zamam.co:443?security=tls&alpn=h2,http/1.1&type=tcp&flow=xtls-rprx-vision&encryption=none#108🇱🇮
 vless://1lpxy6haqm@1lpxy6haqm-451516713-direct.zamam.co:443?security=tls&alpn=h2,http/1.1&fp=chrome&type=tcp&flow=xtls-rprx-vision&encryption=none#152🇱🇮
