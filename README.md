@@ -15,7 +15,6 @@ Subscriptions
 - a — All valid configs from GitHub.
 - b — Manually selected VLESS configurations with Reality/XTLS. [Recommended]
 - c — For testing.
-- d — Configs that are active longer than a month.
 - r — Russian servers.
 
 Every subscription is updated once a week, except for /b/, which is updated every other day.
