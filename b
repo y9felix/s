@@ -1,4 +1,4 @@
-//profile-update-interval: 1#001🇫🇮
+//profile-update-interval: 1
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.47:8880?security=&fp=chrome&type=grpc&encryption=none#002🇫🇷
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@638937544595891094.madrid-prx-dnraacl.info:8880?security=&fp=chrome&type=grpc&encryption=none#003🇫🇷
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@638943444955050447.birjand-drc-tusacaf.info:8880?security=&fp=chrome&type=grpc&encryption=none#004🇳🇱
