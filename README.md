@@ -20,7 +20,11 @@ Subscriptions
 Every subscription is updated once a week, except for /b/, which is updated every other day.
 
 Scripts
-- `a.py` — Searches for the lines that have thing in links and adds them to path. Also does some cleaning, sorting and numbering for better experience.
+- `a.py` — Searches for the lines that have thing in links and adds them to path. Has options for catching old invalid configs. Also does some cleaning, sorting and numbering with optional flagging for better experience.
 - `b.py` — Adds country flags to configs by checking their IP via a free API. [Slow]
+- `chart.py` — Checks all commits in one file for the most long-working and stable configs.
+- `flagsort.py` — Separates by flag when you need configs only from one country.
+- `ispfinder.py` — Sorts configs by their ISP.
+- `siteparse.py` — One website always changes it's domain, and when i locate it, i scrape all configs from it with this script.
 
 More about VLESS and other protocols (In Russian) — [Article](https://habr.com/ru/articles/727868/) || [Video](https://www.youtube.com/watch?v=Ajy1lS9qJbs)
