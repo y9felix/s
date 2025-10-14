@@ -1,4 +1,3 @@
-//profile-update-interval: 1
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.115:8880?security=none&fp=chrome&type=grpc&packetEncoding=xudp&encryption=none#001🇫🇷
 vless://e6d8d743-a9bc-48c9-be99-8f3cc94d16e1@140.238.16.246:443?security=tls&sni=ako.pagate.top&allowInsecure=1&fp=chrome&type=tcp&flow=xtls-rprx-vision&packetEncoding=xudp&encryption=none#002🇰🇷
 vless://a27ff611-7c01-4df3-9471-4fd5cd4bb8e1@193.46.81.151:49330?security=reality&sni=miro.com&fp=chrome&pbk=Dee9YE139lZpb4V3QytB8DvHY3nTCnEXzk2IjvMLHi8&sid=b3&type=tcp&packetEncoding=xudp&encryption=none#003🇬🇧
