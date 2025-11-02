@@ -9,12 +9,10 @@ Configuration checking algorithm:
 - Check validity via [Throne](https://github.com/throneproj/Throne)
 
 Subscriptions
-- a — All valid configs from GitHub.
-- b — Manually selected VLESS configurations with Reality/XTLS. [Recommended]
-- c — For testing.
-- r — Russian servers.
-
-Every subscription is usually updated once a week, except for /b/, which is updated every other day.
+- `a` — All valid configs from GitHub. Updated weekly.
+- `b` — Manually selected VLESS configurations with Reality/XTLS. [Recommended]
+- `c` — Most stable (1+ month) configs. Updated monthly.
+- `r` — Russian servers. Updated weekly.
 
 Scripts
 - `a.py` — Searches for the lines that have thing in links and adds them to path. Has an option for caching old invalid configs. Also does some cleaning, sorting and numbering with optional flagging for better experience.
