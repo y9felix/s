@@ -1,27 +1,26 @@
-## VPN subscriptions for daily usage
-Tested in Russia, RTC ISP.  
-Free forever, no possibility of data leaks or linking them to a person.  
-Configurations are collected from other similar GitHub repositories; the best collection can be found in [NiREvil](https://github.com/NiREvil/vless?tab=readme-ov-file#xray)'s repository.  
-80% are guaranteed to work on the first day after an update.
+## VPN подписки для ежедневного использования  
+Протестировано в России, провайдер Ростелеком.  
+Бесплатно навсегда, без риска утечки данных или привязки к личности.  
+Конфигурации собраны из других подобных репозиториев на GitHub; лучшую коллекцию можно найти в репозитории [NiREvil](https://github.com/NiREvil/vless?tab=readme-ov-file#xray).  
+80% гарантированно работают в первый день после обновления.
 
-Configuration checking algorithm:
-- Start `a.py`
-- Check validity via [Throne](https://github.com/throneproj/Throne)
+Алгоритм проверки конфигураций:
+- Запустить `a.py`
+- Проверить валидность через [Throne](https://github.com/throneproj/Throne)
 
-Subscriptions
-- `a` — All valid configs from GitHub. Updated weekly.
-- `b` — Manually selected VLESS configurations with Reality/XTLS. [Recommended]
-- `c` — Most stable (1+ month) configs. Updated monthly.
-- `r` — Russian servers. Updated weekly.
+**Подписки**  
+- `a` — Все валидные конфигурации с GitHub. Обновляются еженедельно.  
+- `b` — Вручную отобранные конфигурации VLESS с Reality/XTLS. **[Лучший выбор]**  
+- `c` — Наиболее стабильные конфигурации (работают 1+ месяц). Обновляются ежемесячно.  
+- `r` — Серверы в России. Обновляются еженедельно.
 
-Scripts
-- `a.py` — Searches for the lines that have thing in links and adds them to path. Has an option for caching old invalid configs. Also does some cleaning, sorting and numbering with optional flagging for better experience.
-- `b.py` — Adds country flags to configs by checking their IP via a free API. [Slow]
-- `chart.py` — Checks all commits of one file for the most long-working and stable configs.
-- `flagsort.py` — Separates by flag when you need configs only from one country.
-- `ispfinder.py` — Sorts configs by their ISP.
-- `siteparse.py` — One website always changes it's domain, and when I locate it, I scrape all configs from it with this script.
+**Скрипты**  
+- `a.py` — Ищет строки, содержащие ссылки с определённым содержимым, и добавляет их в указанный путь. Поддерживает кэширование недействительных конфигураций. Также выполняет очистку, сортировку, нумерацию и добввление флагов для удобства.  
+- `flagsort.py` — Группирует конфигурации по странам при необходимости выбора серверов только из конкретной страны.  
+- `ispfinder.py` — Сортирует конфигурации по провайдеру (ISP).  
+- `siteparse.py` — Один сайт постоянно меняет домен; когда я его нахожу, этот скрипт собирает все конфигурации с него.
 
-[VLESS](https://github.com/v2fly/v2ray-core) is a FOSS privacy and anti-censority oriented proxy protocol. It is capable of going through China's GFW and other countries internet censorship, and is evidently untraceable by any modern system. The configurations here are also completely private if used with HTTPS. If I ever stop support, you are free to get the scripts that I use in the [scripts](https://github.com/y9felix/s/tree/main/scripts) folder.
+[VLESS](https://github.com/v2fly/v2ray-core) — это открытый (FOSS) прокси-протокол, ориентированный на приватность и обход цензуры. Он способен проходить через «Великий китайский файрвол» (GFW) и другие системы интернет-цензуры и фактически не поддаётся отслеживанию современными средствами. Используемые здесь конфигурации полностью приватны при использовании с HTTPS. В случае прекращения моей поддержки вы можете свободно использовать скрипты из папки [scripts](https://github.com/y9felix/s/tree/main/scripts) для поиска новых конфигураций.
 
-More about VLESS and other protocols (In Russian) — [Article](https://habr.com/ru/articles/727868/) || [Video](https://www.youtube.com/watch?v=Ajy1lS9qJbs)
+Подробнее о VLESS и других протоколах:  
+[Статья](https://habr.com/ru/articles/727868/) || [Видео](https://www.youtube.com/watch?v=Ajy1lS9qJbs)
