@@ -1,4 +1,5 @@
-//profile-update-interval: 1vless://5ec3a039-ea63-4bf9-a848-a65c9bfa66f5@77.37.33.39:443?security=tls&sni=gb-8981.shenzogmbh.com&fp=chrome&type=ws&path=/api/v1&host=gb-8981.shenzogmbh.com&packetEncoding=xudp&encryption=none#01🇨🇾
+//profile-update-interval: 1
+vless://5ec3a039-ea63-4bf9-a848-a65c9bfa66f5@77.37.33.39:443?security=tls&sni=gb-8981.shenzogmbh.com&fp=chrome&type=ws&path=/api/v1&host=gb-8981.shenzogmbh.com&packetEncoding=xudp&encryption=none#01🇨🇾
 vless://id8567660651@178.130.43.35:443?security=reality&sni=ozon.ru&fp=chrome&pbk=0IGwg1a5Gz3UdIbftPAkdWM6Qwy5EeoHEKqzx7GA_kQ&sid=8643&type=tcp&flow=xtls-rprx-vision&packetEncoding=xudp&encryption=none#02🇳🇱
 vless://cloud117@158.160.143.127:443?security=reality&sni=eh.vk.com&fp=chrome&pbk=uF1AdCusRp-alIOTD8ULbc4rmBYHlFn5FXqY3ymWAlc&sid=ab1cd2&type=tcp&flow=xtls-rprx-vision&packetEncoding=xudp&encryption=none#03🇷🇺
 vless://mega1346@5.129.249.134:443?security=reality&sni=ir.ozone.ru&fp=chrome&pbk=F14RpPKCKo_qPcW7EFVu1M18JsAT8c04O08cIi0Ghg4&sid=ab1cd2&type=tcp&flow=xtls-rprx-vision&packetEncoding=xudp&encryption=none#04🇷🇺
