@@ -1,0 +1,73 @@
+proxy-groups: 
+- name: PROXY
+  type: select
+  url: http://cp.cloudflare.com/generate_204
+  expected-status: 204
+  interval: 300
+  icon: https://i.imgur.com/B3HrpPC.png
+  proxies:
+    - auto
+  use:
+    - sub
+
+- name: auto
+  use:
+    - sub
+  type: url-test
+  url: http://cp.cloudflare.com/generate_204
+  expected-status: 204
+  interval: 300
+  tolerance: 150
+  lazy: true
+    
+proxy-providers:
+  sub:
+    type: http
+    url: "http://github.com/y9felix/s/raw/refs/heads/main/b#best"
+    path: ./proxy_providers/sub.yml
+    override:
+      udp: true
+    health-check:
+      enable: true
+      url: http://cp.cloudflare.com/generate_204
+      interval: 300
+      timeout: 5000
+      lazy: true
+      expected-status: 204
+
+rule-providers:
+  skrepysh-proxy:
+    type: http
+    url: https://github.com/Skrepysh/mihomo-rulesets/raw/refs/heads/main/skrepysh-rulesets/skrepysh-proxy.yaml
+    interval: 86400
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+  ru-bundle:
+    type: http
+    url: https://github.com/legiz-ru/mihomo-rule-sets/raw/main/ru-bundle/rule.yaml
+    interval: 86400
+    proxy: DIRECT
+    behavior: domain
+    format: yaml
+  torrent-clients:
+    type: http
+    url: 'https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/refs/heads/main/other/torrent-clients.yaml'
+    interval: 86400
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+  torrent-trackers:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/legiz-ru/mihomo-rule-sets/raw/main/other/torrent-trackers.mrs
+    path: ./rule-sets/torrent-trackers.mrs
+    interval: 86400
+
+rules:
+  - RULE-SET,torrent-clients,DIRECT
+  - RULE-SET,torrent-trackers,DIRECT
+  - RULE-SET,skrepysh-proxy,PROXY
+  - RULE-SET,ru-bundle,PROXY
+  - MATCH,DIRECT
