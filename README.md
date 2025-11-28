@@ -29,6 +29,3 @@
   
 [mkultra69](https://github.com/MKultra6969) за лучший чекер конфигураций  
 [Аминотетралину](https://t.me/la_cringe/) за версию b для Clash клиентов
-
-Подробнее о VLESS и других протоколах:  
-[Статья](https://habr.com/ru/articles/727868/) || [Видео](https://www.youtube.com/watch?v=Ajy1lS9qJbs)
